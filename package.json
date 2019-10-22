@@ -1,0 +1,22 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "description": "API escrita en Node para el taller de APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "API",
+    "Node.js",
+    "Express",
+    "Web",
+    "Server"
+  ],
+  "author": "Miguel Flores",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
