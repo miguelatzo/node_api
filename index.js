@@ -1,5 +1,10 @@
-const express = require('express');
-let app       = express();
+const express    = require('express');
+const bodyParser = require('body-parser'); 
+let app          = express();
+
+//peticiones post,put,patch. las que contengan body
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded(  { extended: true }  ));
 
 app.use('/public', express.static('public'));
 app.get('/', function($request, $response){
