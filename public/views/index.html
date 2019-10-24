@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API de operaciones</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 3vh; 
+        }
+        h1, select{
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .endpoint{
+            display: inline-block;
+            text-align: left;   
+            margin: 10px;
+            border-radius:  10px;
+            border: solid black;
+            padding: 0 15px;
+            width: 60vw;
+        }
+        code{
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 3px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>API</h1>
+        <select name="version" id="version">
+            <option value="1">v1</option>
+        </select>
+    </div>
+    <h2>Endpoints</h2>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/suma/?n1={$1}&n2={$2}...</code></h3>
+        <h4>parámetros de consulta tradicionales</h4>
+        <ul>
+            <li>n1, n2, n3... : son identificadores válidos</li>
+            <li>$1, $2, $3... : son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/suma/$1,$2,$3...</code></h3>
+        <h4>Un parámetro personalizado</h4>
+        <ul>
+            <li>$1, $2, $3... : son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/multiplicacion/?n1={$1}&n2={$2}...</code></h3>
+        <h4>parámetros de consulta tradicionales</h4>
+        <ul>
+            <li>n1, n2, n3... : son identificadores válidos</li>
+            <li>$1, $2, $3... : son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/multiplicacion/$1,$2,$3...</code></h3>
+        <h4>Un parámetro personalizado</h4>
+        <ul>
+            <li>$1, $2, $3... : son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/raices/?a={$1}&b={$2}&c={$2}</code></h3>
+        <h4>parámetros de consulta tradicionales</h4>
+        <ul>
+            <li>a, b y c: deben escribirse en ese orden</li>
+            <li>$1, $2, $3... : son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+    <div class="endpoint">
+        <h3>GET <code>/operaciones/raices/$1,$2,$3...</code></h3>
+        <h4>Un parámetro personalizado</h4>
+        <ul>
+            <li>$1, $2, $3: representan <code>a, b</code> y <code>c</code> y son números reales considerados válidos en el lenguaje JavaScript</li>
+        </ul>
+    </div>
+</body>
+</html>
