@@ -17,6 +17,8 @@
   "author": "Miguel Flores",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bluebird": "^3.7.1",
+    "express": "^4.17.1",
+    "pg-promise": "^9.3.3"
   }
 }

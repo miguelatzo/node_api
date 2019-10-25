@@ -11,7 +11,11 @@ app.get('/', function($request, $response){
     $response.sendFile( __dirname +  '/public/views/index.html');
 });
 
-const operaciones = require('./rutas/operaciones/operaciones');
+const operaciones    = require('./rutas/operaciones/operaciones');
+const auth           = require('./rutas/auth/auth');
+const authMiddleware = require('./auth/middleware/auth');
+app.use('/auth'       , auth);
+app.use('/operaciones', authMiddleware.autenticar);
 app.use('/operaciones', operaciones);
 
 const port = process.env.PORT || 3000;

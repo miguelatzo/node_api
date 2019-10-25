@@ -1,0 +1,1 @@
+UPDATE usuarios SET token = NULL WHERE DATE_PART('minutes', now() - token) > 5;
