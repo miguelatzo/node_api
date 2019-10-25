@@ -35,6 +35,20 @@
             <option value="1">v1</option>
         </select>
     </div>
+    <h2>Autenticación</h2>
+    <div class="endpoint">
+        <h3>POST <code>/auth/otorgar-token/</code></h3>
+        <h4>Cuerpo de la petición POST</h4>
+        <ul>
+            <li>correo: el correo del usuario de la API</li>
+            <li>contrasenia: la contraseña del usuario de API</li>
+        </ul>
+        <h4>Respuesta del servidor</h4>
+        <ul>
+            <li>el <code><i>payload</i></code> de la respuesta del servidor es un JSON de la manera <code style="background-color: white;">{"token": <i><small>timestamp</small></i>}</code></li>
+            <li>Es necesario añadir la cabecera <code>Token: {token}</code> en cada petición posterior</li>
+        </ul>
+    </div>
     <h2>Endpoints</h2>
     <div class="endpoint">
         <h3>GET <code>/operaciones/suma/?n1={$1}&n2={$2}...</code></h3>
