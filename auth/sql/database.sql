@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS usuarios(
     token       timestamp   UNIQUE DEFAULT NULL
 );
 
-INSERT INTO usuarios(correo, contrasenia) VALUES ('miguel@gmail.com', 'miguel', now());
+INSERT INTO usuarios(correo, contrasenia, token) VALUES ('miguel@gmail.com', 'miguel', now());
