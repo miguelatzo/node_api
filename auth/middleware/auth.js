@@ -1,5 +1,5 @@
 let consultas   = require('../consultas/consultas');
-let dbManejador = require('../consultas/query-object');
+let dbManejador = require('../../query-object');
 
 function autenticar($request, $response, $next){
     let token = $request.get('Token');

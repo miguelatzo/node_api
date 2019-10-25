@@ -11,12 +11,15 @@ app.get('/', function($request, $response){
     $response.sendFile( __dirname +  '/public/views/index.html');
 });
 
-const operaciones    = require('./rutas/operaciones/operaciones');
 const auth           = require('./rutas/auth/auth');
 const authMiddleware = require('./auth/middleware/auth');
+const usuarios       = require('./rutas/usuarios/usuarios');
+const operaciones    = require('./rutas/operaciones/operaciones');
 app.use('/auth'       , auth);
 app.use('/operaciones', authMiddleware.autenticar);
 app.use('/operaciones', operaciones);
+app.use('/usuarios'   , authMiddleware.autenticar);
+app.use('/usuarios'   , usuarios);
 
 const port = process.env.PORT || 3000;
 

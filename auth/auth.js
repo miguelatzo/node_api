@@ -1,4 +1,4 @@
-let dbManejador = require ('./consultas/query-object');
+let dbManejador = require ('../query-object');
 let consultas   = require ('./consultas/consultas');
 
 function otorgarToken($request, $response){

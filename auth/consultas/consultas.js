@@ -2,7 +2,7 @@
 * @Author: Miguel Flores
 * @Date:   2019-10-24 04:16:45
 * @Last Modified by:   Miguel Flores
-* @Last Modified time: 2019-10-25 04:33:33
+* @Last Modified time: 2019-10-25 11:13:17
 */
 
 const consulta_token = 
@@ -14,8 +14,11 @@ const consulta_usuario =
     +' WHERE correo      = ${correo}'
     +' AND   contrasenia = ${contrasenia}'
 ;
-const inserta_token = "UPDATE usuarios SET token = now() WHERE correo like ${correo} RETURNING to_char(token, 'YY-MM-DD HH24:MI:SS')";
-
+const inserta_token   = "UPDATE usuarios"
+    +" SET token = now()"
+    +" WHERE correo like ${correo}"
+    +" RETURNING to_char(token, 'YY-MM-DD HH24:MI:SS')"
+;
 module.exports = {
     consulta_token  : consulta_token,
     consulta_usuario: consulta_usuario,
